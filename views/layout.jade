@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        title Housing Affordability
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        link(rel='shortcut icon', href='/favicon.ico')
+        link(href='/libs/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        link(rel='stylesheet', href='/stylesheets/drawBarChart.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', media="(max-width: 700px)", href='stylesheets/mobile.css')
+        link(rel='stylesheet', media="(max-width: 700px)", href='stylesheets/mobileBarChart.css')
+
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+        script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true")
+        script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+        script(src="http://d3js.org/topojson.v1.min.js")
+        script(src="http://d3js.org/d3.v3.min.js")
+        script(src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js")
+        script(src='/libs/markerclusterer.js')
+
+        script(src="/js/addKey.js")
+        script(src="/js/buttons.js")
+        script(src="/js/maps.js")
+        script.
+            var mapStyles = !{JSON.stringify(mapStyle)};
+            var mapStylesLocal = !{JSON.stringify(mapStyleLocal)};
+            var oTTWarea = !{JSON.stringify(TTWarea)};
+            var oLSOAarea = !{JSON.stringify(LSOAarea)};
+            var year = !{JSON.stringify(year)};
+            var oDeficiencyData = {};
+            var oDeficiencyDataYear = !{JSON.stringify(deficiencyData)};
+            oDeficiencyData[year] =  oDeficiencyDataYear;
+            var oLookUps = !{JSON.stringify(LookUps)};
+            var scatterData = {};
+            var oTTWName = !{JSON.stringify(TTWName)};
+            var oLSOAName = !{JSON.stringify(LSOAName)};
+            var oAverages = !{JSON.stringify(averages)};
+
+    body
+
+        .nqmindsHeader
+            .nqmindsTitle
+                a(href="/") nqminds - housing affordability
+                a(href='/references', style="float:right;padding-right:10px;") data sources
+
+        block content

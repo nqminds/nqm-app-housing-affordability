@@ -1,0 +1,66 @@
+extends layout
+
+block content
+    .welcomeInfo.modal.fade
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type="button",data-dismiss="modal",aria-hidden="true") &times;
+                    .modal-title
+                        h4#welcomeTitle
+                .modal-body#welcomeInfoCanvas
+                    h4#welcomeIdTitle
+                    p
+                      | This map shows the percentage of houses that a person could afford based on annual salary. Each TTW (Travel To Work) area is colour coded according to the key displayed on the right. 
+                    p
+                      | You can input your own annual salary, use the median salary for each area and change the year using the settings on the left. Try the Scatter plot button and see what happens.
+                    p
+                      | Click once on any area of the map to zoom in.
+                    p
+                      | Click again on any small area to see a histogram of house prices in that area.
+                    p
+                      | Click Reset at any time to reset.
+                .modal-footer
+                    button.close(type="button",data-dismiss="modal").glyphicon.glyphicon-ok-sign
+                    button.close(type="button",data-dismiss="modal") Take me to the map&nbsp;
+                       
+    .featureInfo.modal.fade
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type="button",data-dismiss="modal",aria-hidden="true") &times;
+                    .modal-title
+                    h4#featureTitle
+                    //h4#featureIdTitle
+                .modal-body#featureInfoCanvas
+                .modal-footer
+                    h5#featureIdTitle
+
+    .container#mapContainer
+        .row#buttonRow
+            .row-md
+                .input-group#findPay
+                    input#pay.form-control(type='text', name='search', placeholder="Enter Annual Income...")
+                    span.input-group-btn
+
+            .row-md
+                .input-group#findYear
+                    select#yearList.form-control                    
+            .row-md
+                .input-group#useTTWPay
+                    button#TTWpay.btn.btn-default.btn(type='submit') Use TTW Average
+                    span.input-group-btn
+                    button#TTWbutton.btn.btn-default.btn(type='submit').glyphicon.glyphicon-cog
+                        
+            .row-md
+                .input-group#SCATTERPLOT
+                    button#sPLOT.btn.btn-default.btn(type='submit') Scatter Plot
+                    span.input-group-btn
+                    button#Scatterbutton.btn.btn-default.btn(type='submit').glyphicon.glyphicon-signal
+            .row-md
+                .input-group#goBACK
+                    button#BackButton.btn.btn-default.btn(type='submit') Reset Map
+                    span.input-group-btn
+                    button#Backbutton.btn.btn-default.btn(type='submit').glyphicon.glyphicon-refresh
+        .mapCanvas
+        .loading

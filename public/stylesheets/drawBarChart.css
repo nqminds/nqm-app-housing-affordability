@@ -1,0 +1,97 @@
+.modal-content{
+    width: 110%;
+}
+
+.modal-header{
+    display: block;
+    width: 95%;
+    padding: 5px;
+    margin: 10px 0px 10px 10px;
+}
+
+#featureTitle{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#modalYear{
+    padding: 0;
+    display: inline-block;
+    width: 80px;
+}
+
+#modalHeaderButtons{
+    display: inline-block;
+    /*padding: 5px;*/
+    margin: 10px;
+}
+
+#welcomeInfoCanvas{
+    font-family: serif;
+    padding: 5%;
+    font-size: 200%;
+    height: 50%;
+    width: 90%;
+}
+
+#featureInfoCanvas{
+    font-family: serif;
+    margin: 20px;
+    font-size: 200%;
+    height: 65vh;
+    }
+
+
+.modal-body{
+    width: 105%;
+    height:100%;
+    padding: 0;
+}
+
+.modal-footer{
+    text-align: left;
+    width: 95%;
+    margin-top:-13%;
+}
+
+
+#featureIdTitle{
+    margin: 3%;
+    font-size: 200%;
+    font-family: sansserif;
+}
+
+.svg {
+}
+
+.d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        z-index: 100000000;
+        position: absolute;
+      }
+
+.axis line,
+.axis path {
+    shape-rendering: crispEdges;
+    fill: lightsteelblue;
+    stroke: transparent;
+}
+.axis text {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bar {
+     fill-opacity: 0.5;
+     fill: steelblue;
+}
+
+.line {
+     stroke-width: 5;
+}
